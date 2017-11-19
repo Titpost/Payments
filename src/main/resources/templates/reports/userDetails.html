@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/css/ui.jqgrid.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="http://klever-hotel.ru/css/card.css" />
+    <link rel="stylesheet" href="../../css/tables.css" />
 
     <style>
         .ui-jqdialog {background-color: #FFFFFF;}
@@ -36,7 +36,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/default" th:text="#{goodDay} + ', ' + ${user}"></a></li>
+                <li><a href="/default" th:text="#{goodDay} + ', ' + ${principal}"></a></li>
                 <li>
                     <form class="navbar-form navbar-right" role="form" action="/logout">
                         <button type="submit" class="btn btn-success" th:text="#{logout}"></button>
@@ -48,11 +48,11 @@
 </div>
 
 <div class="container" style="padding:50px 50px;">
-    <div align="center">
+    <div align="right" style="color:#379037" >
         <h1 th:text="#{user} + ': ' + ${firstName} + ' ' + ${lastName}"></h1>
     </div>
     <div class="col-sm-10">
-        <h2 th:text="#{cards}"></h2>
+        <h1 th:text="#{cards}"></h1>
         <table id="grid-table-cards"></table>
         <div id="grid-pager-cards"></div>
     </div>
@@ -66,7 +66,7 @@
 </div>
 <div class="container" style="padding:50px 50px;">
     <div class="col-sm-10">
-        <h2 th:text="#{orders}"></h2>
+        <h1 th:text="#{orders}"></h1>
         <table id="grid-table-orders"></table>
         <div id="grid-pager-orders"></div>
 
